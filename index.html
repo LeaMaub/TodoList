@@ -11,42 +11,42 @@
 <body>
     <div class="container">
         <div class="row mt-3">
-            <div class="col offset-2">
-                <a href="index.html" class="title display-1 text-decoration-none">Mes tâches <i class="fa-solid fa-table-list"></i></a>
-                <div class="explications">
+            <div class="col text-center">
+                <a href="index.html" class="title display-1 text-decoration-none">Ma To Do List</a>
+                <div class="explication mt-4">
                     Choisissez une catégorie pour commencer à ajouter des tâches
                 </div>
             </div>
         </div>
 
-        <div class="row my-5">
-            <div class="col-7 offset-2 mr-3" id="categoryButtons">
-                <button type="button" class="btn btn-primary" data-category="Travail" onclick="filterByCategory('Travail')">Travail</button>
-                <button type="button" class="btn btn-success" data-category="Maison" onclick="filterByCategory('Maison')">Maison</button>
-                <button type="button" class="btn btn-warning" data-category="Liste de course" onclick="filterByCategory('Liste de course')">Liste de course</button>
-                <button type="button" class="btn btn-info" data-category="Devoir" onclick="filterByCategory('Devoir')">Devoir</button>
-                <button type="button" class="btn btn-secondary" data-category="Administration" onclick="filterByCategory('Administration')">Administration</button>
-            </div>
-        </div>                  
+            <div class="row mt-5 text-center">
+                <div class="col text-center my-5 mr-4" id="categoryButtons">
+                    <button type="button" class="travail" data-category="Travail" onclick="filterByCategory('Travail')">Travail</button>
+                    <button type="button" class="maison" data-category="Maison" onclick="filterByCategory('Maison')">Maison</button>
+                    <button type="button" class="liste" data-category="Liste de course" onclick="filterByCategory('Liste de course')">Liste de course</button>
+                    <button type="button" class="devoir" data-category="Devoir" onclick="filterByCategory('Devoir')">Devoir</button>
+                    <button type="button" class="administration" data-category="Administration" onclick="filterByCategory('Administration')">Administration</button>
+                </div>
+            </div>  
 
-        <form class="row mt-3" id="formAddTask" action="">
-            <input type="hidden" name="action" value="add_task">
-            <div class="col-6 offset-2">
-                <label for="inputTaskName" class="visually-hidden">Tâche</label>
-                <input type="text" class="form-control" name="taskName" id="inputTaskName" placeholder="Créer une tâche" required>
-                <div id="error-message" class="error-message"></div>
-            </div>
-            <div class="col-4">
-                <button type="submit" class="btn btn-primary mb-3">Ajouter</button>
-            </div>
-        </form>
+            <form class="row my-3 justify-content-center" id="formAddTask">
+                <input type="hidden" name="action" value="add_task">
+                <div class="col-md-6">
+                    <label for="inputTaskName" class="visually-hidden">Tâche</label>
+                    <input type="text" class="form-control" name="taskName" id="inputTaskName" placeholder="Créer une tâche" required>
+                    <div id="error-message" class="error-message"></div>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="ajout mb-3">Ajouter</button>
+                </div>
+            </form>            
 
-        <div class="row my-3">
-            <div class="col-7 offset-2 mr-3">
-                <button type="button" class="btn btn-secondary" onclick="filterTasks('all')">Tout</button>
-                <button type="button" class="btn btn-secondary" onclick="filterTasks('to_do')">À faire</button>
-                <button type="button" class="btn btn-secondary" onclick="filterTasks('in_progress')">En cours</button>
-                <button type="button" class="btn btn-secondary" onclick="filterTasks('done')">Terminée</button>
+        <div class="row my-5 text-center">
+            <div class="col mr-3 text-center">
+                <button type="button" class="all" onclick="filterTasks('all')">Tout</button>
+                <button type="button" class="todo" onclick="filterTasks('to_do')">À faire</button>
+                <button type="button" class="inProgress" onclick="filterTasks('in_progress')">En cours</button>
+                <button type="button" class="done" onclick="filterTasks('done')">Terminée</button>
             </div>
         </div>
 

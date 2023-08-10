@@ -10,3 +10,54 @@
     color: red;
     display: none;
 }
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px !important;
+}
+
+button.travail {
+    background-color: #231F20;
+    color: #EFE6DD;
+}
+
+button.maison {
+    background-color: #BB4430;
+    color: #EFE6DD;
+}
+
+button.liste {
+    background-color: #7EBDC2;
+    color: #231F20;
+}
+
+button.devoir {
+    background-color: #F3DFA2;
+    color: #231F20;
+}
+
+button.devoir {
+    background-color: #EFE6DD;
+    color: #231F20;
+}
+
+button.ajout, button.all {
+    background-color:#5D737E;
+    color: #EFE6DD;
+}
+
+button.todo {
+    background-color:#885053;
+    color: #EFE6DD;
+}
+
+button.inProgress {
+    background-color:#777DA7;
+    color: #EFE6DD;
+}
+
+button.done {
+    background-color:#C6ECAE;
+    color: #231F20;
+}
