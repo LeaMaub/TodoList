@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col offset-2">
+                <a href="index.html" class="title display-1 text-decoration-none">Mes tâches <i class="fa-solid fa-table-list"></i></a>
+                <div class="explications">
+                    Choisissez une catégorie pour commencer à ajouter des tâches
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-7 offset-2 mr-3" id="categoryButtons">
+                <button type="button" class="btn btn-primary" data-category="Travail" onclick="filterByCategory('Travail')">Travail</button>
+                <button type="button" class="btn btn-success" data-category="Maison" onclick="filterByCategory('Maison')">Maison</button>
+                <button type="button" class="btn btn-warning" data-category="Liste de course" onclick="filterByCategory('Liste de course')">Liste de course</button>
+                <button type="button" class="btn btn-info" data-category="Devoir" onclick="filterByCategory('Devoir')">Devoir</button>
+                <button type="button" class="btn btn-secondary" data-category="Administration" onclick="filterByCategory('Administration')">Administration</button>
+            </div>
+        </div>                  
+
+        <form class="row mt-3" id="formAddTask" action="">
+            <input type="hidden" name="action" value="add_task">
+            <div class="col-6 offset-2">
+                <label for="inputTaskName" class="visually-hidden">Tâche</label>
+                <input type="text" class="form-control" name="taskName" id="inputTaskName" placeholder="Créer une tâche" required>
+                <div id="error-message" class="error-message"></div>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary mb-3">Ajouter</button>
+            </div>
+        </form>
+
+        <div class="row my-3">
+            <div class="col-7 offset-2 mr-3">
+                <button type="button" class="btn btn-secondary" onclick="filterTasks('all')">Tout</button>
+                <button type="button" class="btn btn-secondary" onclick="filterTasks('to_do')">À faire</button>
+                <button type="button" class="btn btn-secondary" onclick="filterTasks('in_progress')">En cours</button>
+                <button type="button" class="btn btn-secondary" onclick="filterTasks('done')">Terminée</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-7 offset-2">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <th class="text-center">Terminée</th>
+                        <th class="text-center">En cours</th>
+                        <th class="text-center">Nom</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/filters.js"></script>
+    <script src="js/addTask.js"></script>
+    <script src="js/dellTask.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

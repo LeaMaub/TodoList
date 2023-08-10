@@ -1,0 +1,12 @@
+.title {
+    color: rgb(3, 38, 108);
+}
+
+.checkbox {
+    width: 15%;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
