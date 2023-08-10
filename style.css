@@ -74,3 +74,39 @@ button.done {
 button.btn-danger {
     width: 50px;
 }
+
+@media screen and (max-width: 950px) {
+    button.maison, button.travail, button.liste, button.devoir, button.administration {
+        margin-bottom: 10px;
+    }
+
+    form .col-md-1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    form button.ajout {
+        margin-top: 10px;
+    }
+
+    button.all, button.todo, button.inProgress, button.done {
+        margin-bottom: 10px;
+    }
+
+    table thead {
+        vertical-align: middle !important;
+    }
+
+    th.vertical {
+        height: 100px;
+        line-height: 1.5;
+        width: 20px;
+        padding: 5px 0;
+    }
+
+    th.vertical .rotated-text {
+        white-space: nowrap;
+        width: 100%;
+        text-align: center;
+    }
+}
