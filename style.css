@@ -2,6 +2,10 @@
     color: rgb(3, 38, 108);
 }
 
+.explication {
+    font-style: italic;
+}
+
 .checkbox {
     width: 15%;
 }
@@ -12,6 +16,7 @@
 }
 
 button {
+    width: 150px;
     padding: 10px;
     border: none;
     border-radius: 6px !important;
@@ -40,6 +45,10 @@ button.devoir {
 button.devoir {
     background-color: #EFE6DD;
     color: #231F20;
+}
+
+button.ajout {
+    width: 80px;
 }
 
 button.ajout, button.all {
