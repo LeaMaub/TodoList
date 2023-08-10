@@ -70,3 +70,7 @@ button.done {
     background-color:#C6ECAE;
     color: #231F20;
 }
+
+button.btn-danger {
+    width: 50px;
+}
